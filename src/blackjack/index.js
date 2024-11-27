@@ -26,7 +26,16 @@ const iniciarJuego = (numJugadores = 2) => {
   btnDetener.disabled = false;
 }
 
+const preCargarImagenes = () => {
+  const cartas = crearDeck(tipos, especiales);
+  cartas.forEach(carta => {
+    const img = new Image();
+    img.src = `/assets/cartas/${carta}.png`;
+  });
+};
+
 iniciarJuego();
+preCargarImagenes();
 
 // Eventos ----------------------------------------------------------------------------------------------------------------------------------
 btnPedir.addEventListener('click', () => {

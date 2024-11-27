@@ -23,3 +23,54 @@ htmñ, body {
 #computadora-cartas, #jugador-cartas {
   height: 240px;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 10px;
+}
+
+.modal-contenido {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  border-radius: 10px; /* Aplica el border-radius aquí */
+  
+  /* Flexbox para centrar */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distribuye los elementos uniformemente */
+  align-items: center; /* Centra los elementos verticalmente */
+  
+  /* Altura opcional para mejor centrado vertical */
+  height: 100px; /* Ajusta según sea necesario */
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#mensaje-modal {
+  color: black;
+  text-align: center;
+}
